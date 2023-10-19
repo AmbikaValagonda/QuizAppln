@@ -29,8 +29,8 @@ public class QuizUtilService {
 			System.out.println();
 			//Take questions Count input from admin 
 			System.out.println("Admin!  Please enter the number of Questions's you want to create in for Quiz " + (i+1));
-			
 			int numQuestions = sc.nextInt();
+			
 			quiz = ad.addQuiz(numQuestions);
 			q[i] = quiz;
 			

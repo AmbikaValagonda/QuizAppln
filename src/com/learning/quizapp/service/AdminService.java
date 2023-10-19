@@ -9,9 +9,9 @@ import com.learning.quizapp.dao.Quiz;
 public class AdminService {
 	
 	private int quizId;
-
-	/* Method to set quizId, numQuestions and questions to Quiz object */
+	private String quizName;
 	
+	/* Method to set quizId, quizName, numQuestions and questions to Quiz object */
 	public Quiz addQuiz(int numQuestions) {
 		
 		Question[] questions = new Question[numQuestions];
@@ -20,11 +20,11 @@ public class AdminService {
 		Random rand = new Random();
 		
 		System.out.println("Enter name of the Quiz: ");
-		String quizName = sc.nextLine();
+		quizName = sc.nextLine();
 				
 		quizId = rand.nextInt();
 		qz.setQuizId(quizId); // Setting quizId
-		qz.setQuizName(quizName);
+		qz.setQuizName(quizName); // Setting quizName
 		qz.setNumQuestions(numQuestions); // Setting numQuestions
 		
 		for(int i = 0; i<numQuestions; i++) {
